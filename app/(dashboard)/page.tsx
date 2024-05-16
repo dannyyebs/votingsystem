@@ -11,10 +11,10 @@ import db  from "@/lib/db";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+
 
 const HomePage = async () => {
-  const session = await getServerSession(authOptions);
+  const session = await getServerSession();
 
   if (!session){
     redirect("/login")

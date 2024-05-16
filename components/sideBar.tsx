@@ -4,10 +4,8 @@ import { navLinks } from "@/data/navLinks";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import LogOutButton from "./logOutButton";
 import { useSession } from "next-auth/react";
-import { AdminNavLinks } from "@/data/adminNavLinks";
 import { BarChartBig, Settings } from "lucide-react";
 
 const Sidebar = () => {
