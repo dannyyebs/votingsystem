@@ -33,7 +33,7 @@ const ExecutiveMember = async () => {
         />
       ) : (
         <VotedNoticeComponent
-          link="http://localhost:3000/ballot/treasurer"
+          link="/ballot/treasurer"
           positionName="Executive Member"
         />
       )}

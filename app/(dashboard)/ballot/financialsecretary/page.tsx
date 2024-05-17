@@ -22,7 +22,7 @@ const FinancialSecretaryPage = async () => {
         CandidateName="Emmanuel M. K. Baah"
       />:
        <VotedNoticeComponent
-          link="http://localhost:3000/"
+          link="/"
           positionName="Financial Secretary"
           buttonLabel="Go home"
         />}

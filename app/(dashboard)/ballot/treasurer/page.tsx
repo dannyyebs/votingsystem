@@ -23,7 +23,7 @@ const TreasurePage = async () => {
         />
       ) : (
         <VotedNoticeComponent
-          link="http://localhost:3000/ballot/financialsecretary"
+          link="/ballot/financialsecretary"
           positionName="Treasurer"
         />
       )}

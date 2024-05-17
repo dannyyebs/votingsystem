@@ -23,7 +23,7 @@ const ViceChairperson = async () => {
       /> : 
       (
         <VotedNoticeComponent 
-        link="http://localhost:3000/ballot/executivemember"
+        link="/ballot/executivemember"
         positionName="Vice Chairperson"
 
         />
