@@ -11,7 +11,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ThumbsDown, ThumbsUp } from "lucide-react";
+import { ThumbsUp, X } from "lucide-react";
 import { VoteForExecutiveMember } from "@/app/actions/voting/voting";
 
 interface MultipleSingleCandidateProps {
@@ -22,15 +22,17 @@ interface MultipleSingleCandidateProps {
 const MultipleSingleCandidate = (props: MultipleSingleCandidateProps) => {
   return (
     <div>
-      <div className="bg-muted flex justify-between items-center p-4 rounded-xl ">
+      <div className="bg-muted flex justify-between items-center md:p-4 px-1 py-2  rounded-xl">
         <Image
           src={props.candidateImagePath}
           alt={props.candidateName}
           width={160}
           height={160}
-          className="rounded-xl w-36 h-36"
+          className="rounded-md md:rounded-xl md:w-36 md:h-36 w-20 h-20"
         />
-        <p className="font-bold text-2xl px-4">{props.candidateName} </p>
+        <p className="font-bold text-sm md:text-2xl px-4">
+          {props.candidateName}{" "}
+        </p>
 
         {/* from */}
 
@@ -46,11 +48,10 @@ const MultipleSingleCandidate = (props: MultipleSingleCandidateProps) => {
                 <span className="font-bold text-primary">
                   {props.candidateName}
                 </span>{" "}
-                as your next {" "}
+                as your next{" "}
                 <span className="font-bold text-primary">
-                  Executive Member?
+                  Executive Member ?
                 </span>
-                ?
               </DialogDescription>
             </DialogHeader>
             <div className="flex items-center space-x-2 bg-muted p-2 rounded-xl">
@@ -59,28 +60,27 @@ const MultipleSingleCandidate = (props: MultipleSingleCandidateProps) => {
                 alt={props.candidateName}
                 width={160}
                 height={160}
-                className="rounded-xl w-40 h-40 "
+                className="rounded-xl w-20 h-20 md:w-36 md:h-36"
               />
-              <p className="font-bold text-xl">{props.candidateName}</p>
+              <p className="font-bold md:text-xl text-sm">{props.candidateName}</p>
             </div>
             <DialogFooter className="w-full flex-row justify-between gap-x-4 items-center">
-             
+              <DialogClose asChild className="w-full flex gap-4 items-center">
+                <Button type="button" variant="destructive">
+                  <X className="w-4 h-4" />
+                  Cancel
+                </Button>
+              </DialogClose>
               {/* TODO: CHECK THE VOTE FUNCTION */}
-              <form action={() => VoteForExecutiveMember(props.candidateName)} className="w-full">
-                <Button
-                  type="submit"
-                  className="w-full flex gap-4 items-center"
-                >
+              <form
+                action={() => VoteForExecutiveMember(props.candidateName)}
+                className="w-full"
+              >
+                <Button type="submit" className="w-full items-center gap-4">
                   <ThumbsUp className="w-4 h-4" />
                   Confirm
                 </Button>
               </form>
-              <DialogClose asChild className="w-full flex gap-4 items-center">
-                <Button type="button" variant="destructive">
-                  <ThumbsDown className="w-4 h-4" />
-                  Cancel
-                </Button>
-              </DialogClose>
             </DialogFooter>
           </DialogContent>
         </Dialog>

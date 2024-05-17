@@ -26,14 +26,14 @@ const MultipleCandidates = (props: MultipleCandidatesProps) => {
   return (
     <div>
       <div className="flex flex-row justify-between w-full pt-16 lg:pt-0 pb-4">
-        <Card className="w-full h-screen p-6 flex flex-col gap-4 items-center justify-center">
+        <Card className="w-full h-screen md:p-6 px-0 flex flex-col gap-4 items-center justify-center">
           <CardTitle className="flex text-center flex-row items-center justify-center">
-            <div className="font-black uppercase text-3xl">
+            <div className="font-black uppercase md:text-4xl text-2xl">
               {props.positionName}
             </div>
           </CardTitle>
-          <CardDescription className="flex flex-col items-center justify-center">
-            <span className="font-bold text-xl">
+          <CardDescription className="flex flex-col items-center justify-center text-center">
+            <span className="font-bold md:text-2xl text-md">
               {props.descriptionUnderPosition}
             </span>
           </CardDescription>

@@ -6,6 +6,7 @@ import {
   CardFooter,
   CardTitle,
 } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import VoteButton from "@/components/voteButton";
 import db from "@/lib/db";
 import { Dot, TriangleAlert } from "lucide-react";
@@ -27,6 +28,7 @@ const BallotPage = async () => {
         <CardTitle className="flex items-center gap-2 text-red-700">
           <TriangleAlert /> <p>Please note following</p>
         </CardTitle>
+        <Separator />
         <CardDescription>
           Please read the following carefully and take note of them before you
           start voting

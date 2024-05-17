@@ -1,11 +1,6 @@
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import db  from "@/lib/db";
 import { authOptions } from "@/utils/authOptions";
@@ -34,12 +29,12 @@ const user =  session.user.phonenumber
   return (
     <div>
       {/* Header */}
-      <div className="flex flex-row justify-between w-full pt-16 lg:pt-0">
+      <div className=" items-center flex flex-row justify-between w-full pt-16 lg:pt-0">
         <h2 className="font-bold text-xl lg:text-2xl">
           WELCOME: <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">{user}</span>
         </h2>
       </div>
-      <div className="flex items-center gap-2 justify-end  w-full m-2">
+      <div className="flex items-center gap-2 md:justify-end justify-center  w-full m-2">
         <div className="rounded-full w-4 h-4 bg-green-500 shadow-xl shadow-green-500"></div>
         <div className="text-sm font-bold">Voting Starts: 8:00pm</div>
       </div>

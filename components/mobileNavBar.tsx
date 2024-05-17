@@ -11,17 +11,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { BarChartBig, Menu } from "lucide-react";
 import LogOutButton from "./logOutButton";
+import { useSession } from "next-auth/react";
 
 const MobileNav = () => {
   const pathname = usePathname();
-
+  const session = useSession();
+  const userRole = session.data?.user.role;
   return (
     <header className="flex justify-between fixed h-16 w-full shadow-sm bg-white p-5 lg:hidden">
       <Link href="/" className="flex items-center gap-2 md:py-2">
         <Image src="/ucc-logo.webp" alt="logo" width={28} height={28} />
-        <h2 className="font-bold uppercase text-lg">University Basic School</h2>
+        <h2 className="md:hidden font-bold uppercase md:text-lg text-sm">University Basic <br/>School E-Voting</h2>
       </Link>
 <div className="flex flex-row items-center gap-3">
 <LogOutButton />
@@ -67,6 +69,22 @@ const MobileNav = () => {
                     </li>
                   );
                 })}
+                 {userRole === "user" && (
+              <li
+                className={`${
+                  "/results" == pathname &&
+                  " w-full bg-primary-foreground bg-cover text-primary rounded-xl"
+                } font-semibold text-[18px] leading-[140%] flex whitespace-nowrap text-dark-700 hover:bg-primary-foreground hover:w-full hover:rounded-xl`}
+              >
+                <Link
+                  href="/results"
+                  className="p-16-semibold flex size-full gap-4 p-4"
+                >
+                  <BarChartBig />
+                  Results
+                </Link>
+              </li>
+            )}
               </ul>
             </>
           </SheetContent>

@@ -11,7 +11,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ThumbsDown, ThumbsUp, X } from "lucide-react";
+import {  ThumbsUp, X } from "lucide-react";
 import { VoteForChairperson } from "@/app/actions/voting/voting";
 
 interface MultipleSingleCandidateProps {
@@ -22,15 +22,15 @@ interface MultipleSingleCandidateProps {
 const MultipleSingleCandidate = (props: MultipleSingleCandidateProps) => {
   return (
     <div>
-      <div className="bg-muted flex justify-between items-center p-4 rounded-xl">
+      <div className="bg-muted flex justify-between items-center md:p-4 px-1 py-2  rounded-xl">
         <Image
           src={props.candidateImagePath}
           alt={props.candidateName}
           width={160}
           height={160}
-          className="rounded-xl"
+          className="rounded-md md:rounded-xl md:w-36 md:h-36 w-20 h-20"
         />
-        <p className="font-bold text-2xl px-4">{props.candidateName} </p>
+        <p className="font-bold text-sm md:text-2xl px-4">{props.candidateName} </p>
 
         {/* from */}
 
@@ -47,7 +47,7 @@ const MultipleSingleCandidate = (props: MultipleSingleCandidateProps) => {
                   {props.candidateName}
                 </span>{" "}
                 as your{" "}
-                <span className="font-bold text-primary">Favorite pet?</span>?
+                <span className="font-bold text-primary">PTA Chairperson?</span>?
               </DialogDescription>
             </DialogHeader>
             <div className="flex items-center space-x-2 bg-muted p-2 rounded-xl">
@@ -56,9 +56,9 @@ const MultipleSingleCandidate = (props: MultipleSingleCandidateProps) => {
                 alt={props.candidateName}
                 width={160}
                 height={160}
-                className="rounded-xl"
+                className="rounded-xl w-20 h-20 md:w-36 md:h-36"
               />
-              <p className="font-bold text-xl">{props.candidateName}</p>
+              <p className="font-bold md:text-xl text-sm">{props.candidateName}</p>
             </div>
             <DialogFooter className="w-full flex flex-row gap-4 justify-between items-center">
               <DialogClose asChild className="w-full flex gap-4 items-center">

@@ -14,7 +14,6 @@ import {
   DialogClose,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -34,27 +33,27 @@ const SinglePosition = (props: SinglePositionProps) => {
       <div className="flex flex-row justify-between w-full pt-16 lg:pt-0 pb-4">
         <Card className="w-full h-screen p-6 flex flex-col gap-4 items-center justify-center">
           <CardTitle className="flex text-center flex-row items-center justify-center">
-            <div className="font-black uppercase text-3xl">
+            <div className="font-black uppercase md:text-3xl text-xl">
               {props.positionTitle}
             </div>
           </CardTitle>
           <CardDescription className="flex flex-col items-center justify-center">
-            <span className="font-bold text-xl text-center w-auto">
+            <span className="font-bold md:text-xl text-md text-center w-auto">
               {props.positionDescription}
             </span>
           </CardDescription>
-          <CardContent className="flex flex-col gap-4">
+          <CardContent className="flex flex-col md:gap-4 gap-2">
             {/* Single Candidate */}
             <div className="bg-muted flex flex-col gap-4 p-4 rounded-xl">
-              <div className="flex justify-between items-center">
+              <div className="flex flex-col md:flex-row justify-between items-center">
                 <Image
                   src={props.CandidateImage}
                   alt={props.CandidateName}
                   width={160}
                   height={160}
-                  className="rounded-xl w-36 h-36"
+                  className="rounded-xl w-full h-36 object-fill md:w-36"
                 />
-                <p className="font-bold text-2xl px-4">{props.CandidateName}</p>
+                <p className="font-bold text-2xl md:px-4 px-0 py-2">{props.CandidateName}</p>
               </div>
 
               {/* from */}
