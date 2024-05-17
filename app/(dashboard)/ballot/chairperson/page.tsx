@@ -1,11 +1,11 @@
-import { VoteForChairperson } from "@/app/actions/voting/voting";
+import { authOptions } from "@/utils/authOptions";
 import MultipleCandidates from "./multiCandidates";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import React from "react";
 
-const Poll1 = async () => {
-  const session = await getServerSession();
+const ChairpersonVotePage = async () => {
+  const session = await getServerSession(authOptions);
   if (!session) {
     redirect("/login");
   }
@@ -30,4 +30,4 @@ const Poll1 = async () => {
   );
 };
 
-export default Poll1;
+export default ChairpersonVotePage;

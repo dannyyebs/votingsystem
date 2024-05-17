@@ -1,10 +1,11 @@
+import { authOptions } from "@/utils/authOptions";
 import SinglePosition from "./singlePosition";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import React from "react";
 
 const FinancialSecretaryPage = async () => {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) {
     redirect("/login");
   }
