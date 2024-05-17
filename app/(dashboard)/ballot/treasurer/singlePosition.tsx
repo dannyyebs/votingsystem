@@ -18,7 +18,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { VoteForFinancialSecretary } from "@/app/actions/voting/voting";
+import { VoteForTreasurer } from "@/app/actions/voting/voting";
 
 interface SinglePositionProps {
   positionTitle: string;
@@ -108,7 +108,7 @@ const SinglePosition = (props: SinglePositionProps) => {
                       </DialogClose>
                       {/* TODO: NO VOTE */}
                       <form
-                        action={() => VoteForFinancialSecretary("No")}
+                        action={() => VoteForTreasurer("No")}
                         className="w-full"
                       >
                         <Button type="submit" className="w-full flex gap-4 items-center">
@@ -166,7 +166,7 @@ const SinglePosition = (props: SinglePositionProps) => {
                       {/* TODO: YES VOTE */}
                       <form
                         action={() =>
-                          VoteForFinancialSecretary("Emmanuel M. K. Baah")
+                          VoteForTreasurer("Martin Nketsiah Koomson")
                         }
                         className="w-full"
                       >

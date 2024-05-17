@@ -1,10 +1,11 @@
+import { authOptions } from "@/utils/authOptions";
 import SinglePosition from "./singlePosition";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import React from "react";
 
-const Poll2 = async () => {
-  const session = await getServerSession();
+const ViceChairperson = async () => {
+  const session = await getServerSession(authOptions);
   if (!session) {
     redirect("/login");
   }
@@ -20,4 +21,4 @@ const Poll2 = async () => {
   );
 };
 
-export default Poll2;
+export default ViceChairperson;

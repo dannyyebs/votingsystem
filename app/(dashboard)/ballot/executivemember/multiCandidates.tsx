@@ -20,9 +20,6 @@ interface MultipleCandidatesProps {
   candidateTwoName: string;
   CandidateOneImagePath: string;
   candidateTwoImagePath: string;
-  skipPositionFunction: any;
-  voteCandidateOneFunction: any;
-  VoteCandidateTwoFunction: any;
 }
 
 const MultipleCandidates = (props: MultipleCandidatesProps) => {

@@ -1,11 +1,12 @@
 "use server";
 import db from "@/lib/db";
+import { authOptions } from "@/utils/authOptions";
 import { getServerSession } from "next-auth";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export async function VoteForChairperson(candidateName: string) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   const userPhoneNumber = session?.user.phonenumber;
   await db.user.update({
     where: {
@@ -22,7 +23,7 @@ export async function VoteForChairperson(candidateName: string) {
 }
 
 export async function VoteForViceChairperson(candidateName: string) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   const userPhoneNumber = session?.user.phonenumber;
   await db.user.update({
     where: {
@@ -39,7 +40,7 @@ export async function VoteForViceChairperson(candidateName: string) {
 }
 
 export async function VoteForExecutiveMember(candidateName: string) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   const userPhoneNumber = session?.user.phonenumber;
   await db.user.update({
     where: {
@@ -55,7 +56,7 @@ export async function VoteForExecutiveMember(candidateName: string) {
 }
 
 export async function VoteForTreasurer(candidateName: string) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   const userPhoneNumber = session?.user.phonenumber;
   await db.user.update({
     where: {
@@ -72,7 +73,7 @@ export async function VoteForTreasurer(candidateName: string) {
 }
 
 export async function VoteForFinancialSecretary(candidateName: string) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   const userPhoneNumber = session?.user.phonenumber;
   await db.user.update({
     where: {
@@ -101,7 +102,7 @@ export async function VoteForFinancialSecretary(candidateName: string) {
 
 
 export async function StartVote() {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   const userPhoneNumber = session?.user.phonenumber;
   await db.user.update({
     where: {
