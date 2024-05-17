@@ -18,11 +18,9 @@ import {
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
@@ -58,7 +56,6 @@ export default function LoginForm() {
         phonenumber,
         password,
         redirect: false,
-      
       });
 
       // console.log({ response });
@@ -73,10 +70,10 @@ export default function LoginForm() {
       }
 
       console.log("Login Successful", response);
-      toast("Logged in successfully" );
+      toast("Logged in successfully");
     } catch (error: any) {
       console.error("Login Failed:", error);
-      toast( "Login Failed");
+      toast("Login Failed");
     }
   };
 
@@ -85,7 +82,8 @@ export default function LoginForm() {
       <CardHeader>
         <CardTitle className="text-2xl">Login</CardTitle>
         <CardDescription>
-          Enter your email below to login to your account.
+          Enter your phone number and the password you received via SMS below to
+          login to your account.
         </CardDescription>
       </CardHeader>
       <Form {...form}>
