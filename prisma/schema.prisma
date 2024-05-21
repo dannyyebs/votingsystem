@@ -28,3 +28,15 @@ model User {
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
 }
+
+
+model Systemsettings  {
+  id                String   @id @default(cuid())
+  electionStatus    Boolean  @default(false)
+  viewResultsStatus Boolean  @default(false)
+  electionStartDate String  @default("7:00 AM")
+  electionEndDate   String  @default("3:00 PM")  
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
