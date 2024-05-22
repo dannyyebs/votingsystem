@@ -71,7 +71,7 @@ const HomePage = async () => {
               Already voted
             </Button>
             <Button className="w-30" variant="outline">
-              <Link href="/results">View Results</Link>
+              <Link href="/report">View Results</Link>
             </Button>
           </div>
         ) : (
