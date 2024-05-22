@@ -69,7 +69,7 @@ const MobileNav = () => {
                     </li>
                   );
                 })}
-                 {userRole === "user" && (
+               
               <li
                 className={`${
                   "/results" == pathname &&
@@ -77,14 +77,14 @@ const MobileNav = () => {
                 } font-semibold text-[18px] leading-[140%] flex whitespace-nowrap text-dark-700 hover:bg-primary-foreground hover:w-full hover:rounded-xl`}
               >
                 <Link
-                  href="/results"
+                  href="/report"
                   className="p-16-semibold flex size-full gap-4 p-4"
                 >
                   <BarChartBig />
                   Results
                 </Link>
               </li>
-            )}
+           
               </ul>
             </>
           </SheetContent>

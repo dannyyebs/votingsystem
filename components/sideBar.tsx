@@ -51,7 +51,7 @@ const Sidebar = () => {
                 </li>
               );
             })}
-            {userRole === "user" && (
+            
               <li
                 className={`${
                   "/results" == pathname &&
@@ -66,7 +66,7 @@ const Sidebar = () => {
                   Results
                 </Link>
               </li>
-            )}
+           
           </ul>
           {/* I can copy the above for the same styling. But in our case, I will use only profile stuff below */}
           <LogOutButton />
