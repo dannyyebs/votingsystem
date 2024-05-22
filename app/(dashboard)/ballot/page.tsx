@@ -26,10 +26,10 @@ const BallotPage = async () => {
   return (
     <div className="h-screen py-20 flex justify-center items-center">
       {userData?.hasVoted ? (
-        <Card className="h-screen flex flex-col justify-center items-center gap-4 p-4">
+        <Card className="h-screen w-full flex flex-col justify-center items-center gap-4 p-4">
           <TriangleAlert className="w-24 h-24 text-destructive" />
           <p className="font-bold text-xl text-center">
-            Plese you have voted already
+            Please you have voted already
           </p>
           <Link href="/">
             <Button>Go Home</Button>
@@ -65,6 +65,7 @@ const BallotPage = async () => {
           <CardFooter className="w-full flex flex-col items-center">
             <VoteButton />
           </CardFooter>
+          <Link href="/privacypolicy" className="text-xs text-center text-blue-500 hover:text-blue-800 font-bold">Privacy Policy</Link>
         </Card>
       )}
     </div>

@@ -1,11 +1,1688 @@
-const { PrismaClient } = require('@prisma/client');
-const bcrypt = require('bcrypt');
-
-const prisma = new PrismaClient();
-
-async function main() {
-  const users =[
-   
+[
+    {
+        "phonenumber": "0200225151",
+        "password": "Dx0Zk7q3"
+    },
+    {
+        "phonenumber": "0200235985",
+        "password": "lcNEmxc4"
+    },
+    {
+        "phonenumber": "0200288722",
+        "password": "Wh7wtNo6"
+    },
+    {
+        "phonenumber": "0200292840",
+        "password": "04vSBr3n"
+    },
+    {
+        "phonenumber": "0200302055",
+        "password": "4ICMx9oz"
+    },
+    {
+        "phonenumber": "0200313465",
+        "password": "1q1orNd3"
+    },
+    {
+        "phonenumber": "0200338124",
+        "password": "gpI8Uzka"
+    },
+    {
+        "phonenumber": "0200386695",
+        "password": "4gdAznq8"
+    },
+    {
+        "phonenumber": "0200412503",
+        "password": "KsOpX3Fd"
+    },
+    {
+        "phonenumber": "0200466611",
+        "password": "ZgBD1Q0U"
+    },
+    {
+        "phonenumber": "0200517353",
+        "password": "kwcuXqeg"
+    },
+    {
+        "phonenumber": "0200562220",
+        "password": "bjB6vA1S"
+    },
+    {
+        "phonenumber": "0200664444",
+        "password": "PdeBYmWB"
+    },
+    {
+        "phonenumber": "0200675079",
+        "password": "M09pVkS3"
+    },
+    {
+        "phonenumber": "0200831156",
+        "password": "eLPnPA0R"
+    },
+    {
+        "phonenumber": "0200847979",
+        "password": "Nz4D8g27"
+    },
+    {
+        "phonenumber": "0200854189",
+        "password": "HzLB0VBR"
+    },
+    {
+        "phonenumber": "0200861156",
+        "password": "8mdhFrq3"
+    },
+    {
+        "phonenumber": "0200941193",
+        "password": "Lu43E7Ak"
+    },
+    {
+        "phonenumber": "0201189503",
+        "password": "2eAPsEIh"
+    },
+    {
+        "phonenumber": "0201384230",
+        "password": "SGkRIxZq"
+    },
+    {
+        "phonenumber": "0201413838",
+        "password": "rIA64YaM"
+    },
+    {
+        "phonenumber": "0201435244",
+        "password": "Bvtf9HBw"
+    },
+    {
+        "phonenumber": "0201461232",
+        "password": "Z627btS2"
+    },
+    {
+        "phonenumber": "0201492499",
+        "password": "cIfv2bVV"
+    },
+    {
+        "phonenumber": "0201559417",
+        "password": "H3n1UGv3"
+    },
+    {
+        "phonenumber": "0201560059",
+        "password": "OiX66gMZ"
+    },
+    {
+        "phonenumber": "0201580202",
+        "password": "eGDEQit1"
+    },
+    {
+        "phonenumber": "0201700400",
+        "password": "hMhT3INc"
+    },
+    {
+        "phonenumber": "0201852172",
+        "password": "8HvZIpWo"
+    },
+    {
+        "phonenumber": "0201934269",
+        "password": "LHmnM744"
+    },
+    {
+        "phonenumber": "0202001687",
+        "password": "KWS182v1"
+    },
+    {
+        "phonenumber": "0202003658",
+        "password": "LUQgU5g8"
+    },
+    {
+        "phonenumber": "0202012044",
+        "password": "So2MzVyV"
+    },
+    {
+        "phonenumber": "0202026810",
+        "password": "QquVMari"
+    },
+    {
+        "phonenumber": "0202030020",
+        "password": "lhKy6F9x"
+    },
+    {
+        "phonenumber": "0202030137",
+        "password": "MznBQH1o"
+    },
+    {
+        "phonenumber": "0202078646",
+        "password": "LJrBG3R9"
+    },
+    {
+        "phonenumber": "0202122000",
+        "password": "ZcL7RtrC"
+    },
+    {
+        "phonenumber": "0202204460",
+        "password": "HTjuWcxf"
+    },
+    {
+        "phonenumber": "0202313204",
+        "password": "na8TiIUI"
+    },
+    {
+        "phonenumber": "0202516159",
+        "password": "tvBBYZLb"
+    },
+    {
+        "phonenumber": "0202641926",
+        "password": "wsWpkQpo"
+    },
+    {
+        "phonenumber": "0202949217",
+        "password": "TSYBaSx8"
+    },
+    {
+        "phonenumber": "0202949821",
+        "password": "uheDHrCD"
+    },
+    {
+        "phonenumber": "0203003614",
+        "password": "aV83yq28"
+    },
+    {
+        "phonenumber": "0203166665",
+        "password": "XApdwDaw"
+    },
+    {
+        "phonenumber": "0203217172",
+        "password": "v57r2kLr"
+    },
+    {
+        "phonenumber": "0203358049",
+        "password": "591drvu0"
+    },
+    {
+        "phonenumber": "0203527774",
+        "password": "jn4kNoXH"
+    },
+    {
+        "phonenumber": "0203663663",
+        "password": "PyEkeODO"
+    },
+    {
+        "phonenumber": "0203689025",
+        "password": "0CZGbPWQ"
+    },
+    {
+        "phonenumber": "0203778236",
+        "password": "EheQhqlx"
+    },
+    {
+        "phonenumber": "0203778389",
+        "password": "sFi6zMm9"
+    },
+    {
+        "phonenumber": "0203881939",
+        "password": "m8Y93IcI"
+    },
+    {
+        "phonenumber": "0203914988",
+        "password": "sUSs9Jh8"
+    },
+    {
+        "phonenumber": "0204073323",
+        "password": "pKzk9QaV"
+    },
+    {
+        "phonenumber": "0204111717",
+        "password": "0ZoXUUXb"
+    },
+    {
+        "phonenumber": "0204256902",
+        "password": "iw8za39G"
+    },
+    {
+        "phonenumber": "0204316273",
+        "password": "ZhPKoWE0"
+    },
+    {
+        "phonenumber": "0204335500",
+        "password": "wyjXU1OD"
+    },
+    {
+        "phonenumber": "0204445965",
+        "password": "oKBFPYfl"
+    },
+    {
+        "phonenumber": "0204600900",
+        "password": "Wm38WVhG"
+    },
+    {
+        "phonenumber": "0204758608",
+        "password": "3VsbLbkd"
+    },
+    {
+        "phonenumber": "0204819240",
+        "password": "rq1Kft4j"
+    },
+    {
+        "phonenumber": "0204939260",
+        "password": "NU2MHxFE"
+    },
+    {
+        "phonenumber": "0204999993",
+        "password": "hIwCea8c"
+    },
+    {
+        "phonenumber": "0205055973",
+        "password": "WDpKxgVj"
+    },
+    {
+        "phonenumber": "0205251356",
+        "password": "3hAk6GlU"
+    },
+    {
+        "phonenumber": "0205388548",
+        "password": "0es794fd"
+    },
+    {
+        "phonenumber": "0205414443",
+        "password": "0t0llOr1"
+    },
+    {
+        "phonenumber": "0205551981",
+        "password": "BKoPQTqg"
+    },
+    {
+        "phonenumber": "0205663490",
+        "password": "rMgb3mfq"
+    },
+    {
+        "phonenumber": "0206048952",
+        "password": "RU0CICTP"
+    },
+    {
+        "phonenumber": "0206140794",
+        "password": "KqsQyV3T"
+    },
+    {
+        "phonenumber": "0206175100",
+        "password": "m89nRt5D"
+    },
+    {
+        "phonenumber": "0206493122",
+        "password": "opDWyTYS"
+    },
+    {
+        "phonenumber": "0206502427",
+        "password": "zHqHYaOk"
+    },
+    {
+        "phonenumber": "0206640183",
+        "password": "BDdyxnKk"
+    },
+    {
+        "phonenumber": "0206723189",
+        "password": "ERsD3Dd0"
+    },
+    {
+        "phonenumber": "0206740514",
+        "password": "O3fol7Is"
+    },
+    {
+        "phonenumber": "0206826333",
+        "password": "gAS4cgFb"
+    },
+    {
+        "phonenumber": "0206868287",
+        "password": "u7jZXkfc"
+    },
+    {
+        "phonenumber": "0206924316",
+        "password": "pbhYq1GT"
+    },
+    {
+        "phonenumber": "0207039258",
+        "password": "7Rui3Zbu"
+    },
+    {
+        "phonenumber": "0207111623",
+        "password": "pyZGqA48"
+    },
+    {
+        "phonenumber": "0207115668",
+        "password": "Jq1JY2gF"
+    },
+    {
+        "phonenumber": "0207151883",
+        "password": "4lQCpUyZ"
+    },
+    {
+        "phonenumber": "0207211997",
+        "password": "kiloGLeF"
+    },
+    {
+        "phonenumber": "0207213908",
+        "password": "Coqrm9ga"
+    },
+    {
+        "phonenumber": "0207219421",
+        "password": "QJJfnduo"
+    },
+    {
+        "phonenumber": "0207312814",
+        "password": "mj34jkqj"
+    },
+    {
+        "phonenumber": "0207387909",
+        "password": "QonNK2Rn"
+    },
+    {
+        "phonenumber": "0207444604",
+        "password": "NrH3Qphr"
+    },
+    {
+        "phonenumber": "0207504091",
+        "password": "DvtiT494"
+    },
+    {
+        "phonenumber": "0207528593",
+        "password": "CRpxGFJb"
+    },
+    {
+        "phonenumber": "0207709036",
+        "password": "mKT2m4y9"
+    },
+    {
+        "phonenumber": "0207750750",
+        "password": "eYEf0Cim"
+    },
+    {
+        "phonenumber": "0207782723",
+        "password": "wRu1pOK4"
+    },
+    {
+        "phonenumber": "0207783880",
+        "password": "tyQEepOc"
+    },
+    {
+        "phonenumber": "0207783951",
+        "password": "tpCktqJP"
+    },
+    {
+        "phonenumber": "0207841602",
+        "password": "pr8Mk7IB"
+    },
+    {
+        "phonenumber": "0207875911",
+        "password": "dswTd67Y"
+    },
+    {
+        "phonenumber": "0207949705",
+        "password": "42G0WuAO"
+    },
+    {
+        "phonenumber": "0207961736",
+        "password": "0Ak5axWo"
+    },
+    {
+        "phonenumber": "0208017140",
+        "password": "bUKp85rQ"
+    },
+    {
+        "phonenumber": "0208035086",
+        "password": "CZ6PGEuV"
+    },
+    {
+        "phonenumber": "0208043610",
+        "password": "wke9Slyz"
+    },
+    {
+        "phonenumber": "0208078977",
+        "password": "JFBxPWT4"
+    },
+    {
+        "phonenumber": "0208104849",
+        "password": "sm9pe9Uk"
+    },
+    {
+        "phonenumber": "0208114839",
+        "password": "p5yQdZCD"
+    },
+    {
+        "phonenumber": "0208117545",
+        "password": "iNb1mEK4"
+    },
+    {
+        "phonenumber": "0208146604",
+        "password": "nsa7IpH8"
+    },
+    {
+        "phonenumber": "0208152930",
+        "password": "fEvqBemG"
+    },
+    {
+        "phonenumber": "0208158302",
+        "password": "UPTOA0qj"
+    },
+    {
+        "phonenumber": "0208159372",
+        "password": "8jlyURvG"
+    },
+    {
+        "phonenumber": "0208165363",
+        "password": "ORfTIwGG"
+    },
+    {
+        "phonenumber": "0208169325",
+        "password": "w1RBVzzd"
+    },
+    {
+        "phonenumber": "0208169391",
+        "password": "fQyRDhzx"
+    },
+    {
+        "phonenumber": "0208175899",
+        "password": "TlKWkym3"
+    },
+    {
+        "phonenumber": "0208184824",
+        "password": "EVu9vuPG"
+    },
+    {
+        "phonenumber": "0208186134",
+        "password": "dvndZKPU"
+    },
+    {
+        "phonenumber": "0208189147",
+        "password": "PQkzehTu"
+    },
+    {
+        "phonenumber": "0208194913",
+        "password": "3eFsRmqL"
+    },
+    {
+        "phonenumber": "0208194954",
+        "password": "09ngleT3"
+    },
+    {
+        "phonenumber": "0208195857",
+        "password": "rvkTeII2"
+    },
+    {
+        "phonenumber": "0208197554",
+        "password": "Ki8Bx5dB"
+    },
+    {
+        "phonenumber": "0208208687",
+        "password": "Il9MlEyE"
+    },
+    {
+        "phonenumber": "0208210341",
+        "password": "uC5mbhsf"
+    },
+    {
+        "phonenumber": "0208216274",
+        "password": "RXfyaPqR"
+    },
+    {
+        "phonenumber": "0208220474",
+        "password": "vkzOKOv9"
+    },
+    {
+        "phonenumber": "0208243167",
+        "password": "BUPXHeYH"
+    },
+    {
+        "phonenumber": "0208246173",
+        "password": "WwVsaeVN"
+    },
+    {
+        "phonenumber": "0208253126",
+        "password": "b8z1yS9Y"
+    },
+    {
+        "phonenumber": "0208262635",
+        "password": "Vlz5zebh"
+    },
+    {
+        "phonenumber": "0208277918",
+        "password": "xvwBYOvV"
+    },
+    {
+        "phonenumber": "0208286284",
+        "password": "SwuXL6dN"
+    },
+    {
+        "phonenumber": "0208290991",
+        "password": "7x4Numej"
+    },
+    {
+        "phonenumber": "0208299074",
+        "password": "aPVu8LP5"
+    },
+    {
+        "phonenumber": "0208325920",
+        "password": "t4rS8VH7"
+    },
+    {
+        "phonenumber": "0208359716",
+        "password": "TxeflMoh"
+    },
+    {
+        "phonenumber": "0208401573",
+        "password": "32cxL4mn"
+    },
+    {
+        "phonenumber": "0208405853",
+        "password": "rYz4qOpH"
+    },
+    {
+        "phonenumber": "0208412833",
+        "password": "UWmjIpld"
+    },
+    {
+        "phonenumber": "0208449415",
+        "password": "ut6b3P23"
+    },
+    {
+        "phonenumber": "0208450221",
+        "password": "GOId2Zxg"
+    },
+    {
+        "phonenumber": "0208455749",
+        "password": "75K3tsVs"
+    },
+    {
+        "phonenumber": "0208484880",
+        "password": "5VLUrXfm"
+    },
+    {
+        "phonenumber": "0208496302",
+        "password": "WAjQcdYC"
+    },
+    {
+        "phonenumber": "0208530255",
+        "password": "0zNVv2sh"
+    },
+    {
+        "phonenumber": "0208546678",
+        "password": "Bxr6y6kD"
+    },
+    {
+        "phonenumber": "0208552901",
+        "password": "DiIIPtoT"
+    },
+    {
+        "phonenumber": "0208587866",
+        "password": "UayOIo2M"
+    },
+    {
+        "phonenumber": "0208632381",
+        "password": "0IwWZGEL"
+    },
+    {
+        "phonenumber": "0208668363",
+        "password": "ihkaWrLe"
+    },
+    {
+        "phonenumber": "0208701518",
+        "password": "UD8Ci2Aq"
+    },
+    {
+        "phonenumber": "0208727907",
+        "password": "IzXFtLez"
+    },
+    {
+        "phonenumber": "0208752736",
+        "password": "p9NxnV7o"
+    },
+    {
+        "phonenumber": "0208752876",
+        "password": "YBNnSd7S"
+    },
+    {
+        "phonenumber": "0208791075",
+        "password": "ZQ8RkT6H"
+    },
+    {
+        "phonenumber": "0208819563",
+        "password": "qsb6x3O9"
+    },
+    {
+        "phonenumber": "0208821351",
+        "password": "RCjX7pWR"
+    },
+    {
+        "phonenumber": "0208824360",
+        "password": "odLIA5Mx"
+    },
+    {
+        "phonenumber": "0208840326",
+        "password": "j8CAeqwB"
+    },
+    {
+        "phonenumber": "0208840491",
+        "password": "VVk2DKo8"
+    },
+    {
+        "phonenumber": "0208854714",
+        "password": "3w6q89Zy"
+    },
+    {
+        "phonenumber": "0208861923",
+        "password": "rMX6G5QJ"
+    },
+    {
+        "phonenumber": "0208866822",
+        "password": "AV4qng56"
+    },
+    {
+        "phonenumber": "0208869372",
+        "password": "GMH4UHZt"
+    },
+    {
+        "phonenumber": "0208870812",
+        "password": "deFKUFIo"
+    },
+    {
+        "phonenumber": "0208878037",
+        "password": "df246yDj"
+    },
+    {
+        "phonenumber": "0208879637",
+        "password": "amyVtYra"
+    },
+    {
+        "phonenumber": "0208906495",
+        "password": "4t6nn9qg"
+    },
+    {
+        "phonenumber": "0208921644",
+        "password": "6ej4WKO1"
+    },
+    {
+        "phonenumber": "0208939124",
+        "password": "S4tohf6i"
+    },
+    {
+        "phonenumber": "0208983600",
+        "password": "6sDh1C0n"
+    },
+    {
+        "phonenumber": "0208984852",
+        "password": "fgf0Ojmm"
+    },
+    {
+        "phonenumber": "0208988893",
+        "password": "kAYUCS0F"
+    },
+    {
+        "phonenumber": "0209006292",
+        "password": "cOJNQe1R"
+    },
+    {
+        "phonenumber": "0209027416",
+        "password": "6Ly6rNM0"
+    },
+    {
+        "phonenumber": "0209032479",
+        "password": "kyHnIaC0"
+    },
+    {
+        "phonenumber": "0209042480",
+        "password": "FQqFVrI3"
+    },
+    {
+        "phonenumber": "0209081257",
+        "password": "2UgZPtyz"
+    },
+    {
+        "phonenumber": "0209081589",
+        "password": "cDSssApE"
+    },
+    {
+        "phonenumber": "0209165711",
+        "password": "5G5ewHch"
+    },
+    {
+        "phonenumber": "0209165724",
+        "password": "h6mnZgOT"
+    },
+    {
+        "phonenumber": "0209166391",
+        "password": "nAGdgtJn"
+    },
+    {
+        "phonenumber": "0209209147",
+        "password": "qwwwTOkr"
+    },
+    {
+        "phonenumber": "0209210019",
+        "password": "3biYuiau"
+    },
+    {
+        "phonenumber": "0209219688",
+        "password": "LZ6i1TZt"
+    },
+    {
+        "phonenumber": "0209221539",
+        "password": "R2KVZlHo"
+    },
+    {
+        "phonenumber": "0209310658",
+        "password": "kISnAkG7"
+    },
+    {
+        "phonenumber": "0209311143",
+        "password": "8XC6orRE"
+    },
+    {
+        "phonenumber": "0209333876",
+        "password": "URWMdNn5"
+    },
+    {
+        "phonenumber": "0209344093",
+        "password": "onBewhwo"
+    },
+    {
+        "phonenumber": "0209405913",
+        "password": "1FxeI5r0"
+    },
+    {
+        "phonenumber": "0209421563",
+        "password": "X38AFbf9"
+    },
+    {
+        "phonenumber": "0209479672",
+        "password": "Tcd198JJ"
+    },
+    {
+        "phonenumber": "0209541725",
+        "password": "tl5f0U7u"
+    },
+    {
+        "phonenumber": "0209654328",
+        "password": "vS7ym99v"
+    },
+    {
+        "phonenumber": "0209925011",
+        "password": "W9UJp42T"
+    },
+    {
+        "phonenumber": "0209934502",
+        "password": "aecI0fLS"
+    },
+    {
+        "phonenumber": "0233288891",
+        "password": "6zWvNjzU"
+    },
+    {
+        "phonenumber": "0233314417",
+        "password": "3t0yIb2s"
+    },
+    {
+        "phonenumber": "0234720761",
+        "password": "gWF1iFT3"
+    },
+    {
+        "phonenumber": "0234853015",
+        "password": "tSj7mmpR"
+    },
+    {
+        "phonenumber": "0240088103",
+        "password": "4ztNhbke"
+    },
+    {
+        "phonenumber": "0240415574",
+        "password": "8Pt0a3Ak"
+    },
+    {
+        "phonenumber": "0240488097",
+        "password": "BQ9nkxV0"
+    },
+    {
+        "phonenumber": "0240617741",
+        "password": "rFI2JWqT"
+    },
+    {
+        "phonenumber": "0240644450",
+        "password": "hZQvsrLU"
+    },
+    {
+        "phonenumber": "0240646261",
+        "password": "wvpkwhMs"
+    },
+    {
+        "phonenumber": "0240712498",
+        "password": "Gcl0Dsj9"
+    },
+    {
+        "phonenumber": "0240712638",
+        "password": "Rhenf3CC"
+    },
+    {
+        "phonenumber": "0240747318",
+        "password": "lmLx3E3g"
+    },
+    {
+        "phonenumber": "0240776602",
+        "password": "8VH1GotN"
+    },
+    {
+        "phonenumber": "0240797769",
+        "password": "OJSeyvFC"
+    },
+    {
+        "phonenumber": "0240837313",
+        "password": "83sgTnbC"
+    },
+    {
+        "phonenumber": "0240848309",
+        "password": "L0ulGPrP"
+    },
+    {
+        "phonenumber": "0240860232",
+        "password": "yBPNktpL"
+    },
+    {
+        "phonenumber": "0240873061",
+        "password": "YTvhU6HQ"
+    },
+    {
+        "phonenumber": "0240894093",
+        "password": "G5JeuWf1"
+    },
+    {
+        "phonenumber": "0241105708",
+        "password": "3tmHgzvV"
+    },
+    {
+        "phonenumber": "0241140698",
+        "password": "2YUk6Mds"
+    },
+    {
+        "phonenumber": "0241160195",
+        "password": "L5QV6Zap"
+    },
+    {
+        "phonenumber": "0241190681",
+        "password": "WZPksqph"
+    },
+    {
+        "phonenumber": "0241207566",
+        "password": "5FzYpJTr"
+    },
+    {
+        "phonenumber": "0241263731",
+        "password": "47T8l6ap"
+    },
+    {
+        "phonenumber": "0241400847",
+        "password": "N3sRi2xz"
+    },
+    {
+        "phonenumber": "0241404304",
+        "password": "bINrfdhb"
+    },
+    {
+        "phonenumber": "0241417657",
+        "password": "WkBN3zKN"
+    },
+    {
+        "phonenumber": "0241471036",
+        "password": "7HiOcaoe"
+    },
+    {
+        "phonenumber": "0241540005",
+        "password": "Ot1jn93R"
+    },
+    {
+        "phonenumber": "0241556099",
+        "password": "jmF9SCwm"
+    },
+    {
+        "phonenumber": "0241591192",
+        "password": "67foaibv"
+    },
+    {
+        "phonenumber": "0241623358",
+        "password": "hWgYCzta"
+    },
+    {
+        "phonenumber": "0241636135",
+        "password": "AVyjLYf2"
+    },
+    {
+        "phonenumber": "0241639493",
+        "password": "8OiOp3yl"
+    },
+    {
+        "phonenumber": "0241661843",
+        "password": "dnL2nTrH"
+    },
+    {
+        "phonenumber": "0241778002",
+        "password": "O0xqYmUU"
+    },
+    {
+        "phonenumber": "0241784292",
+        "password": "lEBlyBmC"
+    },
+    {
+        "phonenumber": "0241798570",
+        "password": "uaxxRnQK"
+    },
+    {
+        "phonenumber": "0241820134",
+        "password": "MPUX3U8j"
+    },
+    {
+        "phonenumber": "0241824484",
+        "password": "UFFEbWUx"
+    },
+    {
+        "phonenumber": "0241894040",
+        "password": "OiA2PNnF"
+    },
+    {
+        "phonenumber": "0242006785",
+        "password": "Dde0QCI3"
+    },
+    {
+        "phonenumber": "0242030121",
+        "password": "X4q2gyKv"
+    },
+    {
+        "phonenumber": "0242042045",
+        "password": "lW0IoRgQ"
+    },
+    {
+        "phonenumber": "0242047218",
+        "password": "sm0ILFnl"
+    },
+    {
+        "phonenumber": "0242052104",
+        "password": "IrLmHoNL"
+    },
+    {
+        "phonenumber": "0242055178",
+        "password": "gEtKoJjG"
+    },
+    {
+        "phonenumber": "0242071368",
+        "password": "krK9wlAk"
+    },
+    {
+        "phonenumber": "0242076335",
+        "password": "c920uDcQ"
+    },
+    {
+        "phonenumber": "0242088497",
+        "password": "Ogb3Eqgf"
+    },
+    {
+        "phonenumber": "0242116218",
+        "password": "qLMgfux5"
+    },
+    {
+        "phonenumber": "0242122281",
+        "password": "BmCwLf7K"
+    },
+    {
+        "phonenumber": "0242132680",
+        "password": "qkFbXeZr"
+    },
+    {
+        "phonenumber": "0242145459",
+        "password": "2lwSp1qb"
+    },
+    {
+        "phonenumber": "0242148411",
+        "password": "DIhvl1Ro"
+    },
+    {
+        "phonenumber": "0242153088",
+        "password": "6Dpbf1rF"
+    },
+    {
+        "phonenumber": "0242154021",
+        "password": "bRZefZOA"
+    },
+    {
+        "phonenumber": "0242158281",
+        "password": "nZdEcuop"
+    },
+    {
+        "phonenumber": "0242173068",
+        "password": "Ymd8DT8K"
+    },
+    {
+        "phonenumber": "0242176820",
+        "password": "FEpUPeRq"
+    },
+    {
+        "phonenumber": "0242177583",
+        "password": "A7F6jeOG"
+    },
+    {
+        "phonenumber": "0242188655",
+        "password": "NwAjtaod"
+    },
+    {
+        "phonenumber": "0242201568",
+        "password": "3MS7gP1W"
+    },
+    {
+        "phonenumber": "0242203074",
+        "password": "t5uEw04K"
+    },
+    {
+        "phonenumber": "0242209828",
+        "password": "vyODM3m5"
+    },
+    {
+        "phonenumber": "0242210991",
+        "password": "UzXabuxh"
+    },
+    {
+        "phonenumber": "0242211590",
+        "password": "WqBeEavi"
+    },
+    {
+        "phonenumber": "0242212915",
+        "password": "9nV2RNQm"
+    },
+    {
+        "phonenumber": "0242215389",
+        "password": "QlRFqfh2"
+    },
+    {
+        "phonenumber": "0242218792",
+        "password": "MiEowMBG"
+    },
+    {
+        "phonenumber": "0242221672",
+        "password": "oN5kCY7O"
+    },
+    {
+        "phonenumber": "0242230236",
+        "password": "dBxJwfKw"
+    },
+    {
+        "phonenumber": "0242237175",
+        "password": "21WeWatQ"
+    },
+    {
+        "phonenumber": "0242255368",
+        "password": "I4sxvpNm"
+    },
+    {
+        "phonenumber": "0242255751",
+        "password": "tpHRcZf0"
+    },
+    {
+        "phonenumber": "0242255985",
+        "password": "gTeqw0Gz"
+    },
+    {
+        "phonenumber": "0242257173",
+        "password": "wUbXjfuS"
+    },
+    {
+        "phonenumber": "0242260026",
+        "password": "yfLRciNy"
+    },
+    {
+        "phonenumber": "0242261838",
+        "password": "ArslArKt"
+    },
+    {
+        "phonenumber": "0242277832",
+        "password": "QwgU92Q1"
+    },
+    {
+        "phonenumber": "0242282717",
+        "password": "eFO9GCo0"
+    },
+    {
+        "phonenumber": "0242288715",
+        "password": "HcBNg8ry"
+    },
+    {
+        "phonenumber": "0242306917",
+        "password": "DVCT6gn9"
+    },
+    {
+        "phonenumber": "0242315602",
+        "password": "Yci7rWOz"
+    },
+    {
+        "phonenumber": "0242322910",
+        "password": "bz5208kS"
+    },
+    {
+        "phonenumber": "0242329714",
+        "password": "xLnDBbhR"
+    },
+    {
+        "phonenumber": "0242330291",
+        "password": "muejfa2b"
+    },
+    {
+        "phonenumber": "0242331045",
+        "password": "t5AM0tGi"
+    },
+    {
+        "phonenumber": "0242337839",
+        "password": "soiqjXGq"
+    },
+    {
+        "phonenumber": "0242341428",
+        "password": "HQzpt7nC"
+    },
+    {
+        "phonenumber": "0242347397",
+        "password": "PPPz6STa"
+    },
+    {
+        "phonenumber": "0242350346",
+        "password": "07hMt308"
+    },
+    {
+        "phonenumber": "0242358425",
+        "password": "ZO98uGgT"
+    },
+    {
+        "phonenumber": "0242358465",
+        "password": "L5mPqYs0"
+    },
+    {
+        "phonenumber": "0242359282",
+        "password": "qig1IDVN"
+    },
+    {
+        "phonenumber": "0242373804",
+        "password": "529z0PFn"
+    },
+    {
+        "phonenumber": "0242387337",
+        "password": "6Sx5qMHq"
+    },
+    {
+        "phonenumber": "0242388901",
+        "password": "TYsOCi6W"
+    },
+    {
+        "phonenumber": "0242514648",
+        "password": "n4BkNmGC"
+    },
+    {
+        "phonenumber": "0242515636",
+        "password": "ReLvRS36"
+    },
+    {
+        "phonenumber": "0242517664",
+        "password": "BpcskYM7"
+    },
+    {
+        "phonenumber": "0242521278",
+        "password": "YRtDA8LW"
+    },
+    {
+        "phonenumber": "0242524710",
+        "password": "JO2pkgfW"
+    },
+    {
+        "phonenumber": "0242525636",
+        "password": "wFZCbi1O"
+    },
+    {
+        "phonenumber": "0242526308",
+        "password": "w6OWA0hk"
+    },
+    {
+        "phonenumber": "0242527305",
+        "password": "U6vm7slv"
+    },
+    {
+        "phonenumber": "0242530909",
+        "password": "SUgDNJ1T"
+    },
+    {
+        "phonenumber": "0242531686",
+        "password": "GMENtWSO"
+    },
+    {
+        "phonenumber": "0242534976",
+        "password": "2Oc3oGYi"
+    },
+    {
+        "phonenumber": "0242560540",
+        "password": "V4vKE8uD"
+    },
+    {
+        "phonenumber": "0242562283",
+        "password": "yR7BrFBZ"
+    },
+    {
+        "phonenumber": "0242584812",
+        "password": "NaL2aLfi"
+    },
+    {
+        "phonenumber": "0242620589",
+        "password": "4LWnO22U"
+    },
+    {
+        "phonenumber": "0242622953",
+        "password": "qEAykgYC"
+    },
+    {
+        "phonenumber": "0242627001",
+        "password": "TbK8sRPf"
+    },
+    {
+        "phonenumber": "0242627006",
+        "password": "aHOSioLT"
+    },
+    {
+        "phonenumber": "0242639709",
+        "password": "bCLjF8u7"
+    },
+    {
+        "phonenumber": "0242649354",
+        "password": "F5S7y4XF"
+    },
+    {
+        "phonenumber": "0242652706",
+        "password": "AGsfoIpU"
+    },
+    {
+        "phonenumber": "0242659136",
+        "password": "U9q4vbrl"
+    },
+    {
+        "phonenumber": "0242659659",
+        "password": "5QszjYIJ"
+    },
+    {
+        "phonenumber": "0242665432",
+        "password": "zFHF5pRT"
+    },
+    {
+        "phonenumber": "0242671948",
+        "password": "GCxsQOl9"
+    },
+    {
+        "phonenumber": "0242707733",
+        "password": "o9Bm74DP"
+    },
+    {
+        "phonenumber": "0242707864",
+        "password": "QrZWtneO"
+    },
+    {
+        "phonenumber": "0242710982",
+        "password": "2CSHizWf"
+    },
+    {
+        "phonenumber": "0242713714",
+        "password": "Dhei8qPT"
+    },
+    {
+        "phonenumber": "0242716191",
+        "password": "OoxJjZSJ"
+    },
+    {
+        "phonenumber": "0242717371",
+        "password": "nDwWTBuW"
+    },
+    {
+        "phonenumber": "0242717959",
+        "password": "7OJNOCkA"
+    },
+    {
+        "phonenumber": "0242758729",
+        "password": "O1kXgvxs"
+    },
+    {
+        "phonenumber": "0242761516",
+        "password": "DF4Y0nwY"
+    },
+    {
+        "phonenumber": "0242774026",
+        "password": "F09bNWdQ"
+    },
+    {
+        "phonenumber": "0242776162",
+        "password": "oFOMd6ke"
+    },
+    {
+        "phonenumber": "0242777677",
+        "password": "QmgKfAIQ"
+    },
+    {
+        "phonenumber": "0242779434",
+        "password": "2VxT71VT"
+    },
+    {
+        "phonenumber": "0242783282",
+        "password": "OeRtFAU8"
+    },
+    {
+        "phonenumber": "0242784596",
+        "password": "sBEU6DMU"
+    },
+    {
+        "phonenumber": "0242785199",
+        "password": "r9O6cdcR"
+    },
+    {
+        "phonenumber": "0242808925",
+        "password": "0KA9MUCz"
+    },
+    {
+        "phonenumber": "0242818387",
+        "password": "9FhjMuKp"
+    },
+    {
+        "phonenumber": "0242818560",
+        "password": "25h82vbd"
+    },
+    {
+        "phonenumber": "0242824570",
+        "password": "xk99npob"
+    },
+    {
+        "phonenumber": "0242829965",
+        "password": "gWHcKcwS"
+    },
+    {
+        "phonenumber": "0242831842",
+        "password": "KNZ55Ruy"
+    },
+    {
+        "phonenumber": "0242831938",
+        "password": "uK8LDf6V"
+    },
+    {
+        "phonenumber": "0242833148",
+        "password": "YhNTE8fi"
+    },
+    {
+        "phonenumber": "0242834371",
+        "password": "eAYGrilg"
+    },
+    {
+        "phonenumber": "0242837088",
+        "password": "hm3YBwVx"
+    },
+    {
+        "phonenumber": "0242838260",
+        "password": "CJK1PxPd"
+    },
+    {
+        "phonenumber": "0242854523",
+        "password": "hBzQ3S1M"
+    },
+    {
+        "phonenumber": "0242860141",
+        "password": "AVbqWC6Z"
+    },
+    {
+        "phonenumber": "0242863378",
+        "password": "wkqoKCmY"
+    },
+    {
+        "phonenumber": "0242871734",
+        "password": "bGRiMsTc"
+    },
+    {
+        "phonenumber": "0242877781",
+        "password": "Fm3mwULD"
+    },
+    {
+        "phonenumber": "0242889408",
+        "password": "OoR6bAxZ"
+    },
+    {
+        "phonenumber": "0242925233",
+        "password": "P7XcNBKo"
+    },
+    {
+        "phonenumber": "0242934399",
+        "password": "Bazdpxpd"
+    },
+    {
+        "phonenumber": "0242941290",
+        "password": "hj4yv6pZ"
+    },
+    {
+        "phonenumber": "0242948252",
+        "password": "viWNLAE0"
+    },
+    {
+        "phonenumber": "0242955118",
+        "password": "V3RQ093K"
+    },
+    {
+        "phonenumber": "0242960341",
+        "password": "kqvY6guX"
+    },
+    {
+        "phonenumber": "0242969343",
+        "password": "7ZMgEUg3"
+    },
+    {
+        "phonenumber": "0242981332",
+        "password": "eYqs6tDa"
+    },
+    {
+        "phonenumber": "0243003654",
+        "password": "zxSg8p8l"
+    },
+    {
+        "phonenumber": "0243007680",
+        "password": "85csOql1"
+    },
+    {
+        "phonenumber": "0243007695",
+        "password": "Fzk97soV"
+    },
+    {
+        "phonenumber": "0243033677",
+        "password": "iEB1NIME"
+    },
+    {
+        "phonenumber": "0243040094",
+        "password": "0LrDZjc2"
+    },
+    {
+        "phonenumber": "0243053027",
+        "password": "P7pDKfYf"
+    },
+    {
+        "phonenumber": "0243059828",
+        "password": "orzjXyfO"
+    },
+    {
+        "phonenumber": "0243066424",
+        "password": "NzcvKtRi"
+    },
+    {
+        "phonenumber": "0243066679",
+        "password": "NQaFLeqn"
+    },
+    {
+        "phonenumber": "0243067012",
+        "password": "kClQlUdt"
+    },
+    {
+        "phonenumber": "0243069626",
+        "password": "ThlEOqYG"
+    },
+    {
+        "phonenumber": "0243071464",
+        "password": "WhWKFAIK"
+    },
+    {
+        "phonenumber": "0243072958",
+        "password": "jYn33PHc"
+    },
+    {
+        "phonenumber": "0243072989",
+        "password": "3fpJhrOy"
+    },
+    {
+        "phonenumber": "0243073064",
+        "password": "Q06abfDv"
+    },
+    {
+        "phonenumber": "0243074941",
+        "password": "3ufg8TwH"
+    },
+    {
+        "phonenumber": "0243078071",
+        "password": "OUSM6eRh"
+    },
+    {
+        "phonenumber": "0243083053",
+        "password": "X57KWfIE"
+    },
+    {
+        "phonenumber": "0243086042",
+        "password": "WEnihzzQ"
+    },
+    {
+        "phonenumber": "0243102488",
+        "password": "lhsB2sLJ"
+    },
+    {
+        "phonenumber": "0243102530",
+        "password": "CRGrjz1N"
+    },
+    {
+        "phonenumber": "0243102594",
+        "password": "x8f4haWz"
+    },
+    {
+        "phonenumber": "0243113916",
+        "password": "Hwrxvn3b"
+    },
+    {
+        "phonenumber": "0243115609",
+        "password": "mRFdfORv"
+    },
+    {
+        "phonenumber": "0243122806",
+        "password": "WfO8cyoh"
+    },
+    {
+        "phonenumber": "0243127112",
+        "password": "NEJcCJmi"
+    },
+    {
+        "phonenumber": "0243127147",
+        "password": "5aiAkozK"
+    },
+    {
+        "phonenumber": "0243130208",
+        "password": "yJ0nKcct"
+    },
+    {
+        "phonenumber": "0243134578",
+        "password": "8tVP32cT"
+    },
+    {
+        "phonenumber": "0243141863",
+        "password": "UgSFvHQn"
+    },
+    {
+        "phonenumber": "0243154130",
+        "password": "dFWpgWZu"
+    },
+    {
+        "phonenumber": "0243154273",
+        "password": "SK3Tl6Io"
+    },
+    {
+        "phonenumber": "0243167768",
+        "password": "nXUzBH8P"
+    },
+    {
+        "phonenumber": "0243168998",
+        "password": "AADqzHAe"
+    },
+    {
+        "phonenumber": "0243170302",
+        "password": "jCR0x1dq"
+    },
+    {
+        "phonenumber": "0243171354",
+        "password": "ICz3M6s1"
+    },
+    {
+        "phonenumber": "0243171785",
+        "password": "wScgDw5N"
+    },
+    {
+        "phonenumber": "0243173760",
+        "password": "5hATCfSw"
+    },
+    {
+        "phonenumber": "0243176225",
+        "password": "9HxcBwEq"
+    },
+    {
+        "phonenumber": "0243178226",
+        "password": "7DVoPAIM"
+    },
+    {
+        "phonenumber": "0243178783",
+        "password": "Kl8S5S3o"
+    },
+    {
+        "phonenumber": "0243179334",
+        "password": "Qu1O57jm"
+    },
+    {
+        "phonenumber": "0243179460",
+        "password": "HWKJn84h"
+    },
+    {
+        "phonenumber": "0243184021",
+        "password": "NmThGmwo"
+    },
+    {
+        "phonenumber": "0243187713",
+        "password": "l2gHGbcc"
+    },
+    {
+        "phonenumber": "0243187804",
+        "password": "UvkKpijd"
+    },
+    {
+        "phonenumber": "0243206140",
+        "password": "xUCgWzfi"
+    },
+    {
+        "phonenumber": "0243211427",
+        "password": "BZ3Pyr4g"
+    },
+    {
+        "phonenumber": "0243214591",
+        "password": "gvy1oMFT"
+    },
+    {
+        "phonenumber": "0243217817",
+        "password": "7oxKkahF"
+    },
+    {
+        "phonenumber": "0243220787",
+        "password": "6Vk2AeXJ"
+    },
+    {
+        "phonenumber": "0243221981",
+        "password": "cw4nE6zL"
+    },
+    {
+        "phonenumber": "0243237145",
+        "password": "QymKZkdn"
+    },
     {
         "phonenumber": "0243241009",
         "password": "o2JclQT1"
@@ -5089,28 +6766,5 @@ async function main() {
     {
         "phonenumber": "0596995124",
         "password": "ExyZplIf"
-    },
-    {
-        "phonenumber": "0595350354",
-        "password": "danistogas"
     }
-];
-
-  for (const user of users) {
-    const hashedPassword = await bcrypt.hash(user.password, 10);
-    await prisma.user.create({
-      data: {
-        phonenumber: user.phonenumber,
-        password: hashedPassword,
-      },
-    });
-  }
-
-  console.log('Seeding completed.');
-}
-
-main()
-  .catch((e) => console.error(e))
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
+]

@@ -27,6 +27,7 @@ model User {
   password           String
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
+  
 }
 
 
@@ -36,6 +37,7 @@ model Systemsettings  {
   viewResultsStatus Boolean  @default(false)
   electionStartDate String  @default("7:00 AM")
   electionEndDate   String  @default("3:00 PM")  
+  schoolName        String  @default("UBS PTA")
   createdAt         DateTime @default(now())
   updatedAt         DateTime @updatedAt
 }

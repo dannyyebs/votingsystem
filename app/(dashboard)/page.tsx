@@ -5,7 +5,7 @@ import { authOptions } from "@/utils/authOptions";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { getUserData } from "../actions/getInfoFromDB";
+import { getUserData, getVotingStatus } from "../actions/getInfoFromDB";
 
 const HomePage = async () => {
   const session = await getServerSession(authOptions);
@@ -22,22 +22,32 @@ const HomePage = async () => {
 
   const user = session.user.phonenumber;
 
- const userData = await getUserData()
+  const userData = await getUserData();
+  const settingsData = await getVotingStatus();
 
   return (
     <div>
       {/* Header */}
-      <div className=" items-center flex flex-row justify-between w-full pt-16 lg:pt-0">
-        <h2 className="font-bold text-xl lg:text-2xl">
+      <div className=" items-center md:flex flex-row justify-between w-full pt-16 lg:pt-0 ">
+        <h2 className="font-bold text-xl lg:text-2xl text-center">
           WELCOME:{" "}
           <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
             {user}
           </span>
         </h2>
       </div>
-      <div className="flex items-center gap-2 md:justify-end justify-center  w-full m-2">
-        <div className="rounded-full w-4 h-4 bg-green-500 shadow-xl shadow-green-500"></div>
-        <div className="text-sm font-bold">Voting Starts: 8:00pm</div>
+      <div>
+        {settingsData?.electionStatus ? (
+          <div className="flex items-center gap-2 md:justify-end justify-center  w-full m-2">
+            <div className="rounded-full w-4 h-4 bg-green-500 shadow-xl shadow-green-500"></div>
+            <div className="text-sm font-bold">Voting is Live</div>
+          </div>
+        ) : (
+          <div className="flex items-center gap-2 md:justify-end justify-center  w-full m-2">
+            <div className="rounded-full w-4 h-4 bg-orange-500 shadow-xl shadow-green-500"></div>
+            <div className="text-sm font-bold">Voting Starts: 7:00 AM</div>
+          </div>
+        )}
       </div>
       <div className="grid grid-cols-3 gap-2 py-4">
         <Card className="p-4 ">
@@ -53,14 +63,24 @@ const HomePage = async () => {
           <p className="text-sm text-gray-500">Remaining Votes</p>
         </Card>
       </div>
-      
-      <div className="flex justify-center">
-      {userData?.hasVoted ? 
-          <Button className="w-72" disabled>Already voted</Button>
-         : <Link href="/ballot">
-          <Button className="w-72">Vote Now</Button>
-        </Link>}
-       
+
+      <div>
+        {userData?.hasVoted ? (
+          <div className="flex justify-center gap-x-4">
+            <Button className="w-30" disabled>
+              Already voted
+            </Button>
+            <Button className="w-30" variant="outline">
+              <Link href="/results">View Results</Link>
+            </Button>
+          </div>
+        ) : (
+          <div className="flex justify-center gap-x-4">
+            <Link href="/ballot">
+              <Button className="w-72">Vote Now</Button>
+            </Link>
+          </div>
+        )}
       </div>
       {/*Notification Section */}
       {/* <p className="font-thin pt-2">Notifications</p> */}

@@ -1,16 +1,16 @@
 import React from 'react'
 import { Button } from './ui/button'
 import { signOut } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { redirect, useRouter } from 'next/navigation'
 
 const LogOutButton = () => {
   const router = useRouter()
   
   return (
    <Button onClick={()=> {
-    
     signOut()
-    router.push("/login")
+    router.refresh()
+    redirect('/login')
   }}>Log Out</Button>
   )
 }
