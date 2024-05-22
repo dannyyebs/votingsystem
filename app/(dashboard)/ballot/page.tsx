@@ -1,4 +1,4 @@
-import { getUserData } from "@/app/actions/getInfoFromDB";
+import { getUserData, getVotingStatus } from "@/app/actions/getInfoFromDB";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -18,6 +18,7 @@ import React from "react";
 const BallotPage = async () => {
   const session = await getServerSession();
   const userData = await getUserData();
+  const votingStatus = await getVotingStatus();
 
   if (!session) {
     redirect("/login");
@@ -45,27 +46,43 @@ const BallotPage = async () => {
             Please read the following carefully and take note of them before you
             start voting
           </CardDescription>
-          <CardContent>
-            <ul>
-              <li className="flex gap-1 items-center">
-                <Dot size={24} />
-                You can only vote onces
-              </li>
-              <li className="flex gap-1 items-center">
-                <Dot size={24} />
-                Please finish voting before you close the portal{" "}
-              </li>
-              <li className="flex gap-1 items-start">
-                <Dot size={24} />
-                Please note that after voting for an individual, you can not
-                make changes{" "}
-              </li>
-            </ul>
-          </CardContent>
-          <CardFooter className="w-full flex flex-col items-center">
-            <VoteButton />
-          </CardFooter>
-          <Link href="/privacypolicy" className="text-xs text-center text-blue-500 hover:text-blue-800 font-bold">Privacy Policy</Link>
+          {votingStatus?.electionStatus === false ? (
+            <CardContent>
+              <p className="text-red-500 text-center font-bold">
+                Voting has not started
+              </p>
+            </CardContent>
+          ) : (
+            <div>
+              <CardContent>
+                <ul>
+                  <li className="flex gap-1 items-center">
+                    <Dot size={24} />
+                    You can only vote once
+                  </li>
+                  <li className="flex gap-1 items-center">
+                    <Dot size={24} />
+                    Please finish voting before you close the portal{" "}
+                  </li>
+                  <li className="flex gap-1 items-start">
+                    <Dot size={24} />
+                    Please note that after voting for an individual, you can not
+                    make changes{" "}
+                  </li>
+                </ul>
+              </CardContent>
+              <CardFooter className="w-full flex flex-col items-center">
+                <VoteButton />
+              </CardFooter>
+            </div>
+          )}
+
+          <Link
+            href="/privacypolicy"
+            className="text-xs text-center text-blue-500 hover:text-blue-800 font-bold"
+          >
+            Privacy Policy
+          </Link>
         </Card>
       )}
     </div>
